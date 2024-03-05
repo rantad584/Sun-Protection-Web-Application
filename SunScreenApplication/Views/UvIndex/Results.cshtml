@@ -3,12 +3,6 @@
     ViewData["Title"] = "Results";
 }
 
-<h2>Enter Postcode</h2>
-
-<form method="post">
-    <div class="form-group">
-        <label for="postcode">Postcode:</label>
-        <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Enter postcode" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+@model string
+<h2>Results</h2>
+<p>@Model</p>
