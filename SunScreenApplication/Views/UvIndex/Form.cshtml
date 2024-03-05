@@ -5,6 +5,13 @@
 
 <h2>Enter Postcode</h2>
 
+@if (ViewData.ModelState.ContainsKey("PostcodeNotFound"))
+{
+    <div class="alert alert-danger" role="alert">
+        The provided postcode was not found in the database.
+    </div>
+}
+
 <form method="post">
     <div class="form-group">
         <label for="postcode">Postcode:</label>
@@ -12,3 +19,8 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+@if (ViewBag.JsonContents != null)
+{
+    <pre>@ViewBag.JsonContents</pre>
+}

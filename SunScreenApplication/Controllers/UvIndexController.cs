@@ -18,11 +18,6 @@ namespace SunScreenApplication.Controllers
             return View();
         }
 
-        public IActionResult Results(string response)
-        {
-            return View("Results", response);
-        }
-
         // POST: /UvIndex/Form
         [HttpPost]
         public async Task<IActionResult> Form(string postcode)
@@ -40,12 +35,15 @@ namespace SunScreenApplication.Controllers
                 // Check the result from the API and handle accordingly
                 if (response.IsSuccessStatusCode)
                 {
-                // If the API call is successful, redirect to the "Results" action method
-                    return RedirectToAction("Results", new { latitude, longitude, response });
+                    var contents = await response.Content.ReadAsStringAsync();
+                    ViewBag.JsonContents = contents;
+
+                    // If the API call is successful, return view
+                    return View();
                 }
                 else
                 {
-                    // If the API call fails, handle the error (e.g., display an error message)
+                    // If the API call fails, handle the error
                     ModelState.AddModelError(string.Empty, "Failed to call the web API.");
                     return View();
                 }
@@ -53,7 +51,8 @@ namespace SunScreenApplication.Controllers
             else
             {
                 // Handle the case where no data is found for the provided postcode
-                return RedirectToAction("Form");
+                ModelState.AddModelError("PostcodeNotFound", "The provided postcode was not found in the database.");
+                return View();
             }
         }
 
@@ -62,7 +61,7 @@ namespace SunScreenApplication.Controllers
             using (var client = new HttpClient())
             {
                 // Construct the URL for the web API using latitude and longitude values
-                string apiUrl = $"https://api.openweathermap.org/data/2.5/onecall?lat={latitude}&lon={longitude}&appid=8b600573654443eb01a6d8334d00efeb";
+                string apiUrl = $"https://api.openweathermap.org/data/3.0/onecall?lat={latitude}&lon={longitude}&appid=8b600573654443eb01a6d8334d00efeb";
 
                 // Make an HTTP GET request to the web API
                 return await client.GetAsync(apiUrl);
