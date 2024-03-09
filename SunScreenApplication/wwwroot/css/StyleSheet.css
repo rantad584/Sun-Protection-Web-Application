@@ -677,12 +677,15 @@ img {
 
 .uvi-info {
     margin-top: 10px;
+    font-size: 18px;
 }
 
-.uvi-info ul {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.uvi-info span {
+    color: #dc1616;
+}
+
+.uvi-info p {
+    font-size: 18px;
 }
 
 .sunrise,
