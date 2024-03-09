@@ -1,0 +1,770 @@
+﻿.main-content {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.container-type-1 {
+    width: 30%; /* Adjust as needed */
+    max-height: 100%; /* Limit container's height */
+    margin: 10px; /* Add margin between containers */
+    position: relative; /* Position relative for absolute positioning */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Distribute space between content */
+    align-items: center; /* Center content horizontally */
+    border: 2px solid #000; /* Add border around the container */
+    padding: 10px; /* Add padding inside the container */
+    box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+    .container-type-1 img {
+        width: 100%; /* Set width to fill container */
+        height: 100%; /* Set height to fill container */
+        object-fit: cover; /* Ensure the image covers the container */
+    }
+
+    .container-type-1 text {
+        text-align: center; /* Center text horizontally */
+    }
+
+.subject-list {
+    width: 100%;
+}
+
+.subject-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.subject-image {
+    flex: 1;
+    padding-right: 20px;
+}
+
+    .subject-image img {
+        max-width: 300px;
+        max-height: 300px;
+        min-width: 300px;
+        min-height: 300px;
+        object-fit: cover;
+    }
+
+.subject-details {
+    flex: 3;
+}
+
+.banner {
+    z-index: 1;
+    background-image: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTIyOGYzZ2djMnU4a3RhMDUzamxlc2Rhc3k1cG1sNHljbDZtZ3BvYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7rbY6OwRBrkbx8qI/giphy.gif"); /* Replace with the URL of your banner image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    height: 400px; /* Set the height of the banner */
+    width: 100%; /* Take up the full width of the viewport */
+    position: relative; /* Relative positioning for absolute children */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: #ffffff; /* Text color on the banner */
+    text-align: center; /* Center text horizontally */
+    padding: 20px; /* Add padding for text */
+    box-sizing: border-box; /* Include padding in the total width */
+}
+
+    .banner p {
+        margin: 0;
+        padding: 0;
+        font-family: Arial;
+        font-palette: light;
+        font-size: 40px;
+        font-style: italic;
+    }
+
+
+/*ladder format*/
+.uv-index-guide-vertical {
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px auto;
+    box-sizing: border-box;
+}
+
+/*bookshelf format*/
+.uv-index-guide-horizontal {
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    margin: 60px auto;
+    box-sizing: border-box;
+}
+
+/*horiontal container*/
+.stage-row {
+    border: 1px solid #ddd;
+    margin: 60px 0;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; /* This line vertically centers the children */
+    max-width: 100%; /* Prevents the child from exceeding the parent's width */
+    max-height: 100%;
+}
+
+/*vertical container*/
+.stage-column {
+    margin: 60px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This line vertically centers the children */
+    max-width: 100%; /* Prevents the child from exceeding the parent's width */
+    max-height: 100%;
+}
+
+    .stage-column img {
+        width: 90%; /*use percentage instead of px to alter to parent container width*/
+        height: 300px;
+        object-fit: cover;
+        border-radius: 5%;
+    }
+
+        .stage-column img.roundedimage {
+            width: 90%; /*use percentage instead of px to alter to parent container width*/
+            height: 300px;
+            border-radius: 30%;
+            padding-bottom: 1%;
+        }
+
+    .stage-column p {
+        border: 1px solid #ddd;
+        display: flex;
+        border: 1px solid #ddd;
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+.image-collage-wrap {
+    border: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 35%; /* Adjust the width as needed */
+    gap: 10px;
+    max-width: 100%; /* Prevents the child from exceeding the parent's width */
+    max-height: 100%;
+}
+
+    .image-collage-wrap img {
+        border: 2px solid #ff0000;
+        width: calc(50% - 5px); /* Adjust the width as needed */
+
+        height: auto;
+        object-fit: cover; /* Ensures the image covers the container fully */
+        border-radius: 10px;
+    }
+
+.image-collage-row {
+    border: 10px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%; /* Adjust the width as needed */
+    overflow-x: auto; /* Allows horizontal scrolling for many images */
+}
+
+    .image-collage-row img {
+        border: 2px solid #ff0000;
+        min-width: 100px; /* Prevents the child from exceeding the parent's width */
+        width: 20%; /* Fixed width for the image container */
+        height: 300px; /* Fixed height for the image container */
+        object-fit: cover; /* Ensures the image covers the container fully */
+        margin-right: 1%; /* Space between images */
+        border-radius: 20px;
+    }
+
+.text-section {
+    border: 1px solid #ddd;
+    width: 25%; /* Adjust based on your layout */
+    word-wrap: break-word;
+}
+
+    .text-section h4 {
+        border: 1px solid #ddd;
+        margin-top: 0;
+        margin-bottom: 10px; /* Adjust spacing as needed */
+        word-wrap: break-word;
+    }
+
+.text-section-full {
+    border: 1px solid #ddd;
+    width: 90%; /* Adjust based on your layout */
+    word-wrap: break-word;
+}
+
+    .text-section-full h4 {
+        border: 1px solid #ddd;
+        margin-top: 0;
+        margin-bottom: 0px;
+        text-align: center;
+        color: cadetblue;
+        word-wrap: break-word;
+    }
+
+.row-single-image {
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+    height: 300px;
+}
+    .row-single-image img {
+        border: 2px solid #ff0000;
+        width: 70%; /* Fixed width for the image container */
+        height: auto; /* Fixed height for the image container */
+        object-fit: cover; /* Ensures the image covers the container fully */
+        border-radius: 20px;
+    }
+
+.portionheader {
+    padding-top: 100px;
+}
+
+p {
+    font-size: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn.btn-outline-dark {
+    color: #ffffff; /* Text color */
+    background-color: #303030; /* Background color */
+    border-color: #303030; /* Border color */
+    border-radius: 20px;
+}
+
+.btn.btn-outline-dark:hover {
+    color: #303030; /* Text color on hover */
+    background-color: #f1f1f1; /* Background color on hover */
+    border-color: #303030; /* Border color on hover */
+}
+
+.btn.btn-outline-dark-big {
+    width: 30%;
+    margin-top: 5%;
+    font-size: 20px; /* Increase font size */
+    padding: 10px 40px;
+    color: #ffffff; /* Text color */
+    background-color: #303030; /* Background color */
+    border-color: white; /* Border color */
+    border-radius: 40px;
+}
+
+.btn.btn-outline-dark-big:hover {
+    color: #303030; /* Text color on hover */
+    background-color: #f1f1f1; /* Background color on hover */
+    border-color: #f1f1f1; /* Border color on hover */
+}
+
+
+.image-filter {
+    filter: grayscale(100%); /* Convert image to grayscale */
+    transition: filter 0.3s ease; /* Smooth transition for the filter effect */
+}
+
+    .image-filter:hover {
+        filter: none; /* Revert to original color on hover */
+    }
+
+@media (max-width: 800px) {
+    /*1400 to be safe*/
+    .main-content {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .image-collage-wrap{
+        width: 80%;
+    }
+
+    .image-collage-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%; /* Adjust the width as needed */
+        gap: 10px;
+        max-width: 100%; /* Prevents the child from exceeding the parent's width */
+        max-height: 100%;
+        align-items: normal;
+    }
+
+        .image-collage-row img {
+            width: calc(50% - 5px); /* Adjust the width as needed */
+            height: auto;
+            object-fit: cover; /* Ensures the image covers the container fully */
+            margin-right: 0px;
+            border-radius: 10px;
+        }
+
+    .container-type-1,
+    .stage-column,
+    .stage-row,
+    .text-section,
+    .text-section-full,
+    .uv-index-guide-horizontal,
+    .uv-index-guide-vertical {
+        width: 100%; /* Full width for smaller screens */
+        flex-wrap: wrap;
+        font-size: 100%;
+    }
+
+        .container-type-1 img,
+        .stage-column img {
+            width: 80%; /* Adjust image width to fit the container */
+            height: auto; /* Adjust height automatically */
+            max-height: 300px;
+            max-width: 100%;
+        }
+
+            .stage-column img.roundedimage {
+                width: 100%; /* Smaller size for circular images */
+                height: auto; /* Maintain aspect ratio */
+                max-width: 100%;
+            }
+
+    .subject-image img,
+    .graph-image img {
+        max-width: 100%; /* Ensure images do not overflow their container */
+        min-width: 0; /* Remove minimum width */
+        min-height: 0; /* Remove minimum height */
+    }
+
+    .subject-image,
+    .subject-details {
+        flex: 1; /* Adjust flex settings for smaller screens */
+    }
+
+    .subject-item {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    /* Adjust the header padding for smaller screens */
+    .portionheader {
+        padding-top: 50px;
+    }
+
+    .row-single-image {
+        border: 1px solid #ddd;
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        height: auto;
+        max-height: 300px;
+    }
+
+        .row-single-image img {
+            border: 2px solid #ff0000;
+            width: 100%; /* Fixed width for the image container */
+            height: auto; /* Fixed height for the image container */
+            object-fit: cover; /* Ensures the image covers the container fully */
+            border-radius: 20px;
+        }
+}
+
+.UvIndex {
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+    .UvIndex h1,
+    .UvIndex h2,
+    .UvIndex h3,
+    .UvIndex h4 {
+        padding: 0;
+        margin: 0;
+    }
+
+.uvIndexForm-container {
+    padding: 20px;
+    background-color: #fff;
+}
+
+#uvIndexForm {
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#getUVIndexButton {
+    border: none;
+    padding: 10px 20px;
+    background-color: #d9d9d9;
+    width: 200px;
+}
+
+.notice-overlay {
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(53, 53, 53, 0.8);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+}
+
+.notice {
+    max-width: 850px;
+    margin: 115px auto 80px auto;
+    padding: 60px;
+    background-color: #f2f7f4;
+}
+
+.notice-title {
+    text-align: center;
+    padding-bottom: 22px;
+}
+
+.overlay-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 43px;
+}
+
+.button-link {
+    min-width: 190px;
+    max-width: 300px;
+    padding: 13px 25px 12px 25px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    background-color: #00826a;
+    color: #fff;
+}
+
+.button-link:hover {
+    color: #fff;
+}
+
+#address {
+    width: 100%;
+    padding: 0;
+}
+
+.address-label {
+    width: 200px;
+}
+
+.UvIndex-body {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.UvIndex .HeadDia {
+    margin-bottom: 10px;
+}
+
+    .UvIndex .HeadDia p {
+        margin: 0;
+    }
+
+.UvIndex div.uvidia {
+    border: 1px solid #dddddd;
+    height: 115px;
+    position: relative;
+}
+
+.UvIndex div.horhor {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #dddddd;
+    border-top: 0;
+    height: 40px;
+    position: relative;
+}
+
+    .UvIndex div.horhor span {
+        display: inline-block;
+        position: absolute;
+    }
+
+        .UvIndex div.horhor span.hora {
+            line-height: 40px;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 40px;
+            text-align: center;
+        }
+
+        .UvIndex div.horhor span.ener {
+            line-height: 40px;
+            font-size: 20px;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 40px;
+            text-align: center;
+        }
+
+        .UvIndex div.horhor span.bar {
+            top: 10px;
+            left: 60px;
+            right: 50px;
+            height: 20px;
+            background-color: #f5f5f5;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+.UvIndex div.info {
+    display: block;
+    margin: 0;
+    padding: 8px;
+    border: 1px solid #dddddd;
+    border-top: 0;
+}
+
+.UvIndex span.rad {
+    display: block;
+    width: 100%;
+    position: relative;
+    background-color: #6b49c8;
+    height: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+    .UvIndex span.rad.p0,
+    .UvIndex span.rad.p1,
+    .UvIndex span.rad.p2 {
+        background-color: #289500;
+    }
+
+    .UvIndex span.rad.p3,
+    .UvIndex span.rad.p4,
+    .UvIndex span.rad.p5 {
+        background-color: #f7e400;
+    }
+
+    .UvIndex span.rad.p6,
+    .UvIndex span.rad.p7 {
+        background-color: #f85900;
+    }
+
+    .UvIndex span.rad.p8,
+    .UvIndex span.rad.p9,
+    .UvIndex span.rad.p10 {
+        background-color: #d8001d;
+    }
+
+    .UvIndex span.rad.p0 {
+        width: 5%;
+    }
+
+    .UvIndex span.rad.p1 {
+        width: 10%;
+    }
+
+    .UvIndex span.rad.p2 {
+        width: 20%;
+    }
+
+    .UvIndex span.rad.p3 {
+        width: 25%;
+    }
+
+    .UvIndex span.rad.p4 {
+        width: 30%;
+    }
+
+    .UvIndex span.rad.p5 {
+        width: 40%;
+    }
+
+    .UvIndex span.rad.p6 {
+        width: 50%;
+    }
+
+    .UvIndex span.rad.p7 {
+        width: 60%;
+    }
+
+    .UvIndex span.rad.p8 {
+        width: 65%;
+    }
+
+    .UvIndex span.rad.p9 {
+        width: 70%;
+    }
+
+    .UvIndex span.rad.p10 {
+        width: 80%;
+    }
+
+    .UvIndex span.rad.p11 {
+        width: 85%;
+    }
+
+    .UvIndex span.rad.p12 {
+        width: 90%;
+    }
+
+    .UvIndex span.rad.p13 {
+        width: 100%;
+    }
+
+.UvIndex div.uvidia span.more {
+    display: block;
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.UvIndex div.uvidia canvas {
+    width: 160px;
+    height: auto;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.UvIndex div.uvidia h4 {
+    width: 160px;
+    height: 20px;
+    position: absolute;
+    right: 8px;
+    bottom: 4px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.UvIndex div.uvidia .srss {
+    padding-left: 10px;
+}
+
+.uvi-info {
+    margin-top: 10px;
+}
+
+.uvi-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sunrise,
+.sunset {
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: auto 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    display: inline-block;
+    padding-left: 50px;
+    margin-top: 20px;
+}
+
+.sunrise {
+    background-image: url("https://www.tutiempo.net/i/amp/v2/sunrise-g.png");
+    margin-right: 20px;
+}
+
+.sunset {
+    background-image: url("https://www.tutiempo.net/i/amp/v2/sunset-g.png");
+}
+
+@media screen and (max-width: 580px) {
+    #uvIndexForm {
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    #getUVIndexButton {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .sunrise,
+    .sunset {
+        z-index: 2;
+        background-size: auto 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 16px;
+        padding-left: 30px;
+        margin-top: 12px;
+        display: block;
+    }
+}
+
+.UvIndex .space {
+    height: 20px;
+}
+
+.loader-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* High z-index to be on top of other elements */
+    display: none; /* Hidden by default */
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

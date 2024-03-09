@@ -3,24 +3,122 @@
     ViewData["Title"] = "Form";
 }
 
-<h2>Enter Postcode</h2>
-
-@if (ViewData.ModelState.ContainsKey("PostcodeNotFound"))
-{
-    <div class="alert alert-danger" role="alert">
-        The provided postcode was not found in the database.
+<div class="loader-overlay" id="loader-overlay">
+    <div class="loader"></div>
+</div>
+<div class="notice-overlay">
+    <div class="notice">
+        <div class="notice-text">
+            <h2 class="notice-title Heading-2">Instructions</h2>
+            <div class="notice-body-copy">
+            <p>
+                Below you will find a visual that displays the estimated  UV index from 9am to 6pm for a specific location. To use the tool navigate to the below text input page and write, in words, the city in Victoria you would like to know the UV levels of. 
+                To help you make sense of the graph below, here is some information about the UV index and how you might keep yourself and your loved ones safe in Melbourne's powerful sun.
+                The relationship you and your family have with the sun depends on your skin type. Skin types are measured using the Fitzpatrick scale and are discussed more deeply in the ‘about’ section. For now, all you need to know is that the fairer your skin is the quicker you burn and the more efficiently your skin produces vitamin D (Libon,  Cavalier, Nikkels, 2013). 
+                Also keep in mind that the summer sun in Melbourne reaches extreme levels, above 11+. To put this in perspective the great city of Rome usually gets to a peak of 8 UV in summer! So, even if you have darker skin do not take the sun lightly.
+            </p>
+            </div>
+        </div>
+        <div class="overlay-button-container">
+            <a class="button-link" href="#">
+                Got it!
+            </a>
+        </div>
     </div>
-}
-
-<form method="post">
-    <div class="form-group">
-        <label for="postcode">Postcode:</label>
-        <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Enter postcode" required>
+</div>
+<div class="UvIndex">
+    <div class="uvIndexForm-container">
+    <form id="uvIndexForm" class="address-input" onsubmit="getUVIndex(); return false;">
+        <label for="address" class="address-label">Australian Suburb</label>
+        <input
+        type="text"
+        id="address"
+        name="address"
+        required
+        />
+        <button type="submit" id="getUVIndexButton">Get UV Index</button>
+    </form>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-@if (ViewBag.JsonContents != null)
-{
-    <pre>@ViewBag.JsonContents</pre>
-}
+    <!-- Your HTML content for the UV index will go here -->
+    <!-- Example for one day, replicate as needed -->
+    <div class="UvIndex-body">
+    <div class="HeadDia">
+        <h3>Today March 4</h3>
+        <p>
+        Hourly forecast and daily maximum of the ultraviolet index expected
+        for today in <strong class="location">?</strong>. UV data hour by
+        hour.
+        </p>
+    </div>
+    <div class="uvidia">
+        <div class="srss">
+        <div class="sunrise" id="sunrise"></div>
+        <div class="sunset" id="sunset"></div>
+        </div>
+        <span class="more">Hours</span>
+        <canvas
+        id="canvas1"
+        width="400"
+        height="200"
+        style="filter: blur(0.5px)"
+        ></canvas>
+        <h4>Very High</h4>
+    </div>
+    <div class="horhor">
+        <span class="hora">09:00</span>
+        <span class="bar"><span class="rad p1"></span></span>
+        <span class="ener"><strong>1</strong></span>
+    </div>
+    <div class="horhor">
+        <span class="hora">10:00</span
+        ><span class="bar"><span class="rad p3"></span></span
+        ><span class="ener"><strong>3</strong></span>
+    </div>
+    <div class="horhor">
+        <span class="hora">11:00</span
+        ><span class="bar"><span class="rad p6"></span></span
+        ><span class="ener"><strong>6</strong></span>
+    </div>
+    <div class="horhor">
+        <span class="hora">12:00</span
+        ><span class="bar"><span class="rad p8"></span></span
+        ><span class="ener"><strong>8</strong></span>
+    </div>
+    <div class="horhor">
+        <span class="hora">13:00</span
+        ><span class="bar"><span class="rad p9"></span></span
+        ><span class="ener"><strong>9</strong></span>
+    </div>
+    <div class="horhor">
+        <span class="hora">14:00</span
+        ><span class="bar"><span class="rad p9"></span></span
+        ><span class="ener"><strong>9</strong></span>
+    </div>
+    <div class="horhor">
+        <span class="hora">15:00</span
+        ><span class="bar"><span class="rad p7"></span></span
+        ><span class="ener"><strong>7</strong></span>
+    </div>
+    <div class="horhor">
+        <span class="hora">16:00</span
+        ><span class="bar"><span class="rad p5"></span></span
+        ><span class="ener"><strong>5</strong></span>
+    </div>
+    <div class="horhor">
+        <span class="hora">17:00</span
+        ><span class="bar"><span class="rad p2"></span></span
+        ><span class="ener"><strong>2</strong></span>
+    </div>
+    <div class="horhor">
+        <span class="hora">18:00</span
+        ><span class="bar"><span class="rad p1"></span></span
+        ><span class="ener"><strong>1</strong></span>
+    </div>
+    <div class="info">
+        The <strong>UV index</strong> forecast for <strong>today</strong> in
+        <strong class="location">?</strong> is
+        <strong class="uvLevel">very high</strong>.
+    </div>
+    <p class="uvi-info"></p>
+    </div>
+</div>
