@@ -293,7 +293,7 @@ async function getUVIndex() {
             document.getElementById("loader-overlay").style.display = "none"; // Hide the overlay
             document.getElementById("address").disabled = false; // Re-enable the address input
             document.getElementById("getUVIndexButton").disabled = false; // Re-enable the button
-            alert("City does not exist!");
+            alert("City does not exist, please input city name in Victoria.");
             return; // Stop execution if no city found
         }
         const { lat, lng } = geocodeData.results[0].geometry.location;
@@ -342,6 +342,7 @@ async function getUVIndex() {
     document.getElementById("getUVIndexButton").disabled = false; // Re-enable the button
 }
 
+// hide UV index pop-up notice after clicking button
 document.querySelectorAll('.button-link').forEach(function (button) {
     button.addEventListener('click', function (e) {
         document.querySelectorAll('.notice-overlay').forEach(function (overlay) {
