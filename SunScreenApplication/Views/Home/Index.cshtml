@@ -19,11 +19,11 @@
 	<h1>What is UV and its Impacts?</h1>
 </div>
 <p>
-	Information Information Information Information Information Information Information Information Information Information Information Information Information Information
+	Information
 </p>
 
 <div class="uv-index-guide-horizontal">
-	<!-- Very Low -->
+	<!-- Problem 1 -->
 	<div class="stage-column">
 		<img src="https://free-images.com/lg/9361/melanoma.jpg" alt="Image 1 for Very Low UV Index" class="roundedimage image-filter" />
 			<div class="text-section-full">
@@ -31,7 +31,7 @@
 			<p>Australia has one of the highest rates of skin cancer in the world, including melanoma and non-melanoma skin cancers. UV radiation is a major contributing factor to the development of these cancers.</p>
 		</div>
 	</div>
-	<!-- Low -->
+	<!-- Problem 2 -->
 	<div class="stage-column">
 		<img src="https://free-images.com/lg/11fe/sunburn_back.jpg" alt="Image 1 for Very Low UV Index" class="roundedimage image-filter">
 		<div class="text-section-full">
@@ -39,7 +39,7 @@
 			<p>Even a single sunburn, especially in childhood, can significantly increase the risk of developing skin cancer later in life. Children's skin is more sensitive and burns more easily than adult skin.</p>
 		</div>
 	</div>
-	<!-- Medium -->
+	<!-- Problem 3 -->
 	<div class="stage-column">
 		<img src="https://free-images.com/lg/a755/koli_bacteria_escherichia_coli.jpg" alt="Image 2 for Very Low UV Index" class="roundedimage image-filter">
 		<div class="text-section-full">
@@ -48,44 +48,47 @@
 		</div>
 	</div>
 </div>
+
 <div class="uv-index-guide-vertical">
 	<!-- Heat Trend -->
 	<div class="stage-row">
 		<div class="text-section">
+			<h4>Sun Safety Activities for Children</h4>
+			<p>UV radiation in Australia can be particularly intense due to factors such as its proximity to the equator and the thinning ozone layer in the Southern Hemisphere. This makes sun safety especially important for children, whose skin is more sensitive to UV damage. Find age-appropriate tips and tricks to make sun safety fun and engaging for children.</p>
+			@Html.ActionLink("Fun Sun Safety »", "FunSunSafety", "Home", null, new { @class = "btn btn-outline-dark" })
+		</div>
+		<div class="row-single-image">
+			<img src="https://www.csiro.au/-/media/OnA/Images/SOTC-2022/2-Temperature/SoTC_T01_v3.png" alt="Australia Heat Trend" />
+		</div>
+		<div class="text-section">
 			<h4>Australia Heat Trend</h4>
 			<p>We might need to remove this section as the graph image is not a public free image.</p>
-		</div>
-		<div class="graph-image">
-			<img src="https://www.csiro.au/-/media/OnA/Images/SOTC-2022/2-Temperature/SoTC_T01_v3.png" alt="Australia Heat Trend" />
 		</div>
 	</div>
 </div>
 
-<div>
-	<section class="row" aria-labelledby="aspnetTitle">
-	</section>
+ <div>
+	 <section class="row" aria-labelledby="aspnetTitle">
+	 </section>
 
-	<div class="row">
-		<section class="col-md-4" aria-labelledby="gettingStartedTitle">
-			<h2 id="gettingStartedTitle">Track UV</h2>
-			<p>
-				Check to see UVI Indexes at different locations in Victoria!
-			</p>
-			@Html.ActionLink("Go »", "Form", "UvIndex", null, new { @class = "btn btn-outline-dark" })
-		</section>
-		<section class="col-md-4" aria-labelledby="librariesTitle">
-			<h2 id="librariesTitle">Impacts of UV</h2>
-			<p>
-				Wake up to Reality. Protect yourself from UV!
-			</p>
-			@Html.ActionLink("UV Impacts »", "UVImpacts", "Home", null, new { @class = "btn btn-outline-dark" })
-		</section>
-		<section class="col-md-4" aria-labelledby="hostingTitle">
-			<h2 id="hostingTitle">Contact Us</h2>
-			<p>Phone: +61 4353434343</p>
-			<p>Email: admin@gmail.com</p>
-			<p>Address: 22 Wellington Rd, Clayton VIC 3800</p>
-			@Html.ActionLink("Go to Clothing Options", "HowToProtect", "Home", null, new { @class = "btn btn-outline-dark", href = Url.Action("HowToProtect", "Home") + "#ClothingProtectionStart" })
-		</section>
-	</div>
-</div>    
+	 <div class="row">
+		 <section class="col-md-6" aria-labelledby="gettingStartedTitle">
+			 <h2 id="gettingStartedTitle">Track UV Indexes</h2>
+			 <p>
+				 Check to see the UVI Indexes at different locations in Victoria!
+			 </p>
+			 @Html.ActionLink("Go to Track UV »", "Form", "UvIndex", null, new { @class = "btn btn-outline-dark" })
+			 <br>
+			 <br>
+			 <br>
+			 <br>
+		 </section>
+		 <section class="col-md-6" aria-labelledby="hostingTitle">
+			 <h2 id="hostingTitle">Contact Us</h2>
+			 <p>Phone: +61 XXXXXXXXX</p>
+			 <p>Email: admin@gmail.com</p>
+			 <p>Address: 22 Wellington Rd, Clayton VIC 3800</p>
+		 </section>
+	 </div>
+ </div>
+ 
