@@ -441,8 +441,24 @@ img {
 }
 
 .notice-title {
-    text-align: center;
     padding-bottom: 22px;
+}
+
+.notice-body-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.notice-note p {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .notice-note p {
+        margin-bottom: 5px;
+    }
 }
 
 .overlay-button-container {
