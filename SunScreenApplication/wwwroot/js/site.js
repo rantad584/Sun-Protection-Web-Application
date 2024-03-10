@@ -20,25 +20,23 @@ function MaxUviDay(a, e) {
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     DibujarAirQuality(a);
-
-    // Update the UV level displayed in the HTML
-    const uvLevelElement = document.querySelector(".uvLevel");
-    if (uvLevelElement) {
-        // Here you could add logic to convert the UV index number to a textual level (low, moderate, high, very high, etc.)
+    
+    const uvLevelElements = document.querySelectorAll(".uvLevel");
+    uvLevelElements.forEach(uvLevelElement => {
         let uvLevelText = "";
         if (a <= 2) {
             uvLevelText = "Low";
-        } else if (a <= 5) {
+        } else if (a <= 4) {
             uvLevelText = "Moderate";
-        } else if (a <= 7) {
+        } else if (a <= 6) {
             uvLevelText = "High";
-        } else if (a <= 10) {
+        } else if (a <= 8) {
             uvLevelText = "Very High";
         } else {
             uvLevelText = "Extreme";
         }
-        uvLevelElement.textContent = uvLevelText; // Update the UV level text based on maximum UV index
-    }
+        uvLevelElement.textContent = uvLevelText; // Update the UV level text based on UV index
+    });
     const uvInfoElement = document.querySelector(".uvi-info");
     if (uvInfoElement) {
         let uvLevelText = `<span>Suggestion:</span>`;

@@ -734,6 +734,10 @@ img {
     height: 20px;
 }
 
+.info .uvLevel {
+    text-transform: lowercase;
+}
+
 .loader-overlay {
     position: fixed;
     left: 0;
