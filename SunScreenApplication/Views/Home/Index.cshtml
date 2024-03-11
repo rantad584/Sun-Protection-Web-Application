@@ -1,6 +1,6 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Home Page";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div>
@@ -17,16 +17,48 @@
 
 <div class="portionheader">
 	<h1>What is UV and its Impacts?</h1>
+	<p>
+		Ultraviolet (UV) rays are responsible for more than 95% of skin cancers, yet many mistakenly
+		associate them solely with sunlight and heat. It's important to note that UV rays are
+		invisible and cannot be felt, leading to potential confusion.
+	</p>
+	<div>
+		<h2>Benefits</h2>
+		<p>
+			The sun aids in the production of vitamin D, a crucial nutrient for human health.
+			Vitamin D facilitates the absorption of calcium and phosphorus from food, supporting
+			bone development. The World Health Organization (WHO) suggests 5 to 15 minutes of sun
+			exposure 2 to 3 times weekly to maintain adequate levels of vitamin D.
+		</p>
+		<h2>Risks</h2>
+		<p>
+			Protective measures such as sunscreen and sunglasses can mitigate UV radiation exposure.
+			Sunburn indicates short-term overexposure, while prolonged exposure can result in
+			premature aging and skin cancer. Failure to shield the eyes from UV radiation may
+			increase the risk of sight-threatening eye diseases. Overexposure to UV radiation poses
+			significant health risks, including cancer. Skin cancer is prevalent in Australia, with
+			basal cell and squamous cell carcinomas being the most common types. Typically, these
+			cancers develop on areas like the head, face, neck, hands, and arms, which receive the
+			highest UV exposure. Melanoma, the deadliest form of skin cancer, is often attributed
+			to UV radiation exposure. While anyone can experience adverse health effects from UV
+			radiation, certain factors increase susceptibility:
+		</p>
+		<ol>
+			<li>Prolonged sun exposure or history of sunburn</li>
+			<li>Light-colored skin, hair, and eyes</li>
+			<li>Use of certain medications or cosmetics that heighten skin and eye sensitivity to UV</li>
+			<li>Family history of skin cancer</li>
+			<li>Age over 50</li>
+		</ol>
+		<p>(https://www.cdc.gov/nceh/features/uv-radiation-safety/index.html)</p>
+	</div>
 </div>
-<p>
-	Information
-</p>
 
 <div class="uv-index-guide-horizontal">
 	<!-- Problem 1 -->
 	<div class="stage-column">
 		<img src="https://free-images.com/lg/9361/melanoma.jpg" alt="Image 1 for Very Low UV Index" class="roundedimage image-filter" />
-			<div class="text-section-full">
+		<div class="text-section-full">
 			<h4>Increased Risk of Skin Cancer</h4>
 			<p>Australia has one of the highest rates of skin cancer in the world, including melanoma and non-melanoma skin cancers. UV radiation is a major contributing factor to the development of these cancers.</p>
 		</div>
@@ -67,28 +99,27 @@
 	</div>
 </div>
 
- <div>
-	 <section class="row" aria-labelledby="aspnetTitle">
-	 </section>
+<div class="uv-index-guide-contact">
+	<section class="row" aria-labelledby="aspnetTitle">
+	</section>
 
-	 <div class="row">
-		 <section class="col-md-6" aria-labelledby="gettingStartedTitle">
-			 <h2 id="gettingStartedTitle">Track UV Indexes</h2>
-			 <p>
-				 Check to see the UVI Indexes at different locations in Victoria!
-			 </p>
-			 @Html.ActionLink("Go to Track UV »", "Form", "UvIndex", null, new { @class = "btn btn-outline-dark" })
-			 <br>
-			 <br>
-			 <br>
-			 <br>
-		 </section>
-		 <section class="col-md-6" aria-labelledby="hostingTitle">
-			 <h2 id="hostingTitle">Contact Us</h2>
-			 <p>Phone: +61 XXXXXXXXX</p>
-			 <p>Email: admin@gmail.com</p>
-			 <p>Address: 22 Wellington Rd, Clayton VIC 3800</p>
-		 </section>
-	 </div>
- </div>
- 
+	<div class="row">
+		<section class="col-md-6" aria-labelledby="gettingStartedTitle">
+			<h2 id="gettingStartedTitle">Track UV Indexes</h2>
+			<p>
+				Check to see the UVI Indexes at different locations in Victoria!
+			</p>
+			@Html.ActionLink("Go to Track UV »", "Form", "UvIndex", null, new { @class = "btn btn-outline-dark" })
+			<br>
+			<br>
+			<br>
+			<br>
+		</section>
+		<section class="col-md-6" aria-labelledby="hostingTitle">
+			<h2 id="hostingTitle">Contact Us</h2>
+			<p>Phone: +61 XXXXXXXXX</p>
+			<p>Email: admin@gmail.com</p>
+			<p>Address: 22 Wellington Rd, Clayton VIC 3800</p>
+		</section>
+	</div>
+</div>

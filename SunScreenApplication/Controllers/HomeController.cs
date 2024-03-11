@@ -31,11 +31,11 @@ namespace SunScreenApplication.Controllers
             return View();
         }
 
-		public ActionResult FunSunSafety()
-		{
-			ViewBag.Message = "Fun Sun Safety for Children page";
+        public ActionResult FunSunSafety()
+        {
+            ViewBag.Message = "Fun Sun Safety for Children page";
 
-			return View();
-		}
-	}
+            return View();
+        }
+    }
 }

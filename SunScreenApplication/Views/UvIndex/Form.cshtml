@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Form";
 }
 
@@ -17,8 +16,8 @@
                     <li>Click “Get UV Index” Button.</li>
                 </ol>
                 <p>
-                    By following these instructions, you can effectively utilize the UV index tool 
-                    and make informed decisions to protect yourself and your loved ones from the 
+                    By following these instructions, you can effectively utilize the UV index tool
+                    and make informed decisions to protect yourself and your loved ones from the
                     sun's harmful effects.
                 </p>
                 <div class="notice-note">
@@ -28,7 +27,7 @@
                         during summer, comparable to the peak UV levels in cities like Rome.
                     </p>
                     <p>
-                        Even if you have darker skin, take precautions when exposed to the 
+                        Even if you have darker skin, take precautions when exposed to the
                         sun, as its intensity can still pose risks to your skin health.
                     </p>
                 </div>
@@ -43,97 +42,85 @@
 </div>
 <div class="UvIndex">
     <div class="uvIndexForm-container">
-    <form id="uvIndexForm" class="address-input" onsubmit="getUVIndex(); return false;">
-        <label for="address" class="address-label">Australian City</label>
-        <input
-        type="text"
-        id="address"
-        name="address"
-        required
-        />
-        <button type="submit" id="getUVIndexButton">Get UV Index</button>
-    </form>
+        <form id="uvIndexForm" class="address-input" onsubmit="getUVIndex(); return false;">
+            <label for="address" class="address-label">Victorian City</label>
+            <input type="text"
+                   id="address"
+                   name="address"
+                   required />
+            <button type="submit" id="getUVIndexButton">Get UV Index</button>
+        </form>
     </div>
     <!-- Your HTML content for the UV index will go here -->
     <!-- Example for one day, replicate as needed -->
     <div class="UvIndex-body">
-    <div class="HeadDia">
-        <h3>Today March 4</h3>
-        <p>
-        Hourly forecast and daily maximum of the ultraviolet index expected
-        for today in <strong class="location">?</strong>. UV data hour by
-        hour.
-        </p>
-    </div>
-    <div class="uvidia">
-        <div class="srss">
-        <div class="sunrise" id="sunrise"></div>
-        <div class="sunset" id="sunset"></div>
+        <div class="HeadDia">
+            <h3>Today March 4</h3>
+            <p>
+                Hourly forecast and daily maximum of the ultraviolet index expected
+                for today in <strong class="location">?</strong>. UV data hour by
+                hour.
+            </p>
         </div>
-        <span class="more">Hours</span>
-        <canvas
-        id="canvas1"
-        width="400"
-        height="200"
-        style="filter: blur(0.5px)"
-        ></canvas>
-        <h4 class="uvLevel">Low</h4>
+        <div class="uvidia">
+            <div class="srss">
+                <div class="sunrise" id="sunrise"></div>
+                <div class="sunset" id="sunset"></div>
+            </div>
+            <span class="more">Hours</span>
+            <canvas id="canvas1"
+                    width="400"
+                    height="200"
+                    style="filter: blur(0.5px)"></canvas>
+            <h4 class="uvLevel">Low</h4>
+        </div>
+        <div class="horhor">
+            <span class="hora">09:00</span>
+            <span class="bar"><span class="rad p1"></span></span>
+            <span class="ener"><strong>1</strong></span>
+        </div>
+        <div class="horhor">
+            <span class="hora">10:00</span><span class="bar"><span class="rad p3"></span></span><span class="ener"><strong>3</strong></span>
+        </div>
+        <div class="horhor">
+            <span class="hora">11:00</span><span class="bar"><span class="rad p6"></span></span><span class="ener"><strong>6</strong></span>
+        </div>
+        <div class="horhor">
+            <span class="hora">12:00</span><span class="bar"><span class="rad p8"></span></span><span class="ener"><strong>8</strong></span>
+        </div>
+        <div class="horhor">
+            <span class="hora">13:00</span><span class="bar"><span class="rad p9"></span></span><span class="ener"><strong>9</strong></span>
+        </div>
+        <div class="horhor">
+            <span class="hora">14:00</span><span class="bar"><span class="rad p9"></span></span><span class="ener"><strong>9</strong></span>
+        </div>
+        <div class="horhor">
+            <span class="hora">15:00</span><span class="bar"><span class="rad p7"></span></span><span class="ener"><strong>7</strong></span>
+        </div>
+        <div class="horhor">
+            <span class="hora">16:00</span><span class="bar"><span class="rad p5"></span></span><span class="ener"><strong>5</strong></span>
+        </div>
+        <div class="horhor">
+            <span class="hora">17:00</span><span class="bar"><span class="rad p2"></span></span><span class="ener"><strong>2</strong></span>
+        </div>
+        <div class="horhor">
+            <span class="hora">18:00</span><span class="bar"><span class="rad p1"></span></span><span class="ener"><strong>1</strong></span>
+        </div>
+        <div class="info">
+            The <strong>UV index</strong> forecast for <strong>today</strong> in
+            <strong class="location">?</strong> is
+            <strong class="uvLevel">low</strong>.
+        </div>
+        <div class="uvi-info"></div>
     </div>
-    <div class="horhor">
-        <span class="hora">09:00</span>
-        <span class="bar"><span class="rad p1"></span></span>
-        <span class="ener"><strong>1</strong></span>
-    </div>
-    <div class="horhor">
-        <span class="hora">10:00</span
-        ><span class="bar"><span class="rad p3"></span></span
-        ><span class="ener"><strong>3</strong></span>
-    </div>
-    <div class="horhor">
-        <span class="hora">11:00</span
-        ><span class="bar"><span class="rad p6"></span></span
-        ><span class="ener"><strong>6</strong></span>
-    </div>
-    <div class="horhor">
-        <span class="hora">12:00</span
-        ><span class="bar"><span class="rad p8"></span></span
-        ><span class="ener"><strong>8</strong></span>
-    </div>
-    <div class="horhor">
-        <span class="hora">13:00</span
-        ><span class="bar"><span class="rad p9"></span></span
-        ><span class="ener"><strong>9</strong></span>
-    </div>
-    <div class="horhor">
-        <span class="hora">14:00</span
-        ><span class="bar"><span class="rad p9"></span></span
-        ><span class="ener"><strong>9</strong></span>
-    </div>
-    <div class="horhor">
-        <span class="hora">15:00</span
-        ><span class="bar"><span class="rad p7"></span></span
-        ><span class="ener"><strong>7</strong></span>
-    </div>
-    <div class="horhor">
-        <span class="hora">16:00</span
-        ><span class="bar"><span class="rad p5"></span></span
-        ><span class="ener"><strong>5</strong></span>
-    </div>
-    <div class="horhor">
-        <span class="hora">17:00</span
-        ><span class="bar"><span class="rad p2"></span></span
-        ><span class="ener"><strong>2</strong></span>
-    </div>
-    <div class="horhor">
-        <span class="hora">18:00</span
-        ><span class="bar"><span class="rad p1"></span></span
-        ><span class="ener"><strong>1</strong></span>
-    </div>
-    <div class="info">
-        The <strong>UV index</strong> forecast for <strong>today</strong> in
-        <strong class="location">?</strong> is
-        <strong class="uvLevel">low</strong>.
-    </div>
-    <div class="uvi-info"></div>
+    <div class="row">
+        <section class="col-md-2" aria-labelledby="gettingStartedTitle">
+            <a href="@Url.Action("HowToProtect", "Home")#SunscreenUsageStart" class="btn btn-outline-dark">Sunscreen Usage »</a>
+            <br>
+            <br>
+        </section>
+        <section class="col-md-2" aria-labelledby="hostingTitle">
+            <a href="@Url.Action("HowToProtect", "Home")#ClothingProtectionStart" class="btn btn-outline-dark">Clothings for UV »</a>
+        </section>
     </div>
 </div>

@@ -24,15 +24,15 @@
     box-sizing: border-box; /* Include padding and border in the total width */
 }
 
-.container-type-1 img {
-    width: 100%; /* Set width to fill container */
-    height: 100%; /* Set height to fill container */
-    object-fit: cover; /* Ensure the image covers the container */
-}
+    .container-type-1 img {
+        width: 100%; /* Set width to fill container */
+        height: 100%; /* Set height to fill container */
+        object-fit: cover; /* Ensure the image covers the container */
+    }
 
-.container-type-1 text {
-    text-align: center; /* Center text horizontally */
-}
+    .container-type-1 text {
+        text-align: center; /* Center text horizontally */
+    }
 
 .subject-list {
     width: 100%;
@@ -52,13 +52,13 @@
     padding-right: 20px;
 }
 
-.subject-image img {
-    max-width: 300px;
-    max-height: 300px;
-    min-width: 300px;
-    min-height: 300px;
-    object-fit: cover;
-}
+    .subject-image img {
+        max-width: 300px;
+        max-height: 300px;
+        min-width: 300px;
+        min-height: 300px;
+        object-fit: cover;
+    }
 
 .subject-details {
     flex: 3;
@@ -82,23 +82,23 @@
     border: 5px solid #ddd;
 }
 
-.banner p {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, serif;
-    font-palette: light;
-    font-size: 200%;
-    font-style: italic;
-}
+    .banner p {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, serif;
+        font-palette: light;
+        font-size: 200%;
+        font-style: italic;
+    }
 
 
 /*ladder format*/
 .uv-index-guide-vertical {
-//border: 1px solid #ddd;
+    //border: 1px solid #ddd;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 60px auto;
+    margin: 30px auto;
     box-sizing: border-box;
 }
 
@@ -107,14 +107,14 @@
     display: flex;
     flex-direction: row;
     gap: 1%;
-    margin: 60px auto;
+    margin: 30px auto;
     box-sizing: border-box;
 }
 
 /*horiontal container*/
 .stage-row {
-    margin: 60px 0;
-    padding: 15px;
+    margin: 0;
+    padding: 15px 0;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -126,7 +126,7 @@
 
 /*vertical container*/
 .stage-column {
-    margin: 60px 0;
+    margin: 30px 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -135,26 +135,26 @@
     max-height: 100%;
 }
 
-.stage-column img {
-    width: 90%; /*use percentage instead of px to alter to parent container width*/
-    height: 300px;
-    object-fit: cover;
-    border-radius: 5%;
-}
+    .stage-column img {
+        width: 90%; /*use percentage instead of px to alter to parent container width*/
+        height: 300px;
+        object-fit: cover;
+        border-radius: 5%;
+    }
 
-.stage-column img.roundedimage {
-    width: 90%; /*use percentage instead of px to alter to parent container width*/
-    height: 300px;
-    border-radius: 30%;
-    padding-bottom: 1%;
-}
+        .stage-column img.roundedimage {
+            width: 90%; /*use percentage instead of px to alter to parent container width*/
+            height: 300px;
+            border-radius: 30%;
+            padding-bottom: 1%;
+        }
 
-.stage-column p {
-    display: flex;
-    width: 100%;
-    word-wrap: break-word;
-    margin-bottom: 0;
-}
+    .stage-column p {
+        display: flex;
+        width: 100%;
+        word-wrap: break-word;
+        margin-bottom: 0;
+    }
 
 .image-collage-wrap {
     display: flex;
@@ -166,13 +166,13 @@
     max-height: 100%;
 }
 
-.image-collage-wrap img {
-    width: calc(50% - 5px); /* Adjust the width as needed */
+    .image-collage-wrap img {
+        width: calc(50% - 5px); /* Adjust the width as needed */
 
-    height: auto;
-    object-fit: cover; /* Ensures the image covers the container fully */
-    border-radius: 10px;
-}
+        height: auto;
+        object-fit: cover; /* Ensures the image covers the container fully */
+        border-radius: 10px;
+    }
 
 .image-collage-row {
     display: flex;
@@ -183,25 +183,25 @@
     overflow-x: auto; /* Allows horizontal scrolling for many images */
 }
 
-.image-collage-row img {
-    min-width: 100px; /* Prevents the child from exceeding the parent's width */
-    width: 20%; /* Fixed width for the image container */
-    height: 300px; /* Fixed height for the image container */
-    object-fit: cover; /* Ensures the image covers the container fully */
-    margin-right: 1%; /* Space between images */
-    border-radius: 20px;
-}
+    .image-collage-row img {
+        min-width: 100px; /* Prevents the child from exceeding the parent's width */
+        width: 20%; /* Fixed width for the image container */
+        height: 300px; /* Fixed height for the image container */
+        object-fit: cover; /* Ensures the image covers the container fully */
+        margin-right: 1%; /* Space between images */
+        border-radius: 20px;
+    }
 
 .text-section {
     width: 25%; /* Adjust based on your layout */
     word-wrap: break-word;
 }
 
-.text-section h4 {
-    margin-top: 0;
-    margin-bottom: 10px; /* Adjust spacing as needed */
-    word-wrap: break-word;
-}
+    .text-section h4 {
+        margin-top: 0;
+        margin-bottom: 10px; /* Adjust spacing as needed */
+        word-wrap: break-word;
+    }
 
 .text-section-full {
     display: flex;
@@ -210,13 +210,13 @@
     word-wrap: break-word;
 }
 
-.text-section-full h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-    color: cadetblue;
-    word-wrap: break-word;
-}
+    .text-section-full h4 {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        color: cadetblue;
+        word-wrap: break-word;
+    }
 
 .row-single-image {
     display: flex;
@@ -226,12 +226,13 @@
     margin-right: 1%;
     margin-top: 1%;
 }
-.row-single-image img {
-    width: 70%; /* Fixed width for the image container */
-    height: auto; /* Fixed height for the image container */
-    object-fit: cover; /* Ensures the image covers the container fully */
-    border-radius: 20px;
-}
+
+    .row-single-image img {
+        width: 70%; /* Fixed width for the image container */
+        height: auto; /* Fixed height for the image container */
+        object-fit: cover; /* Ensures the image covers the container fully */
+        border-radius: 20px;
+    }
 
 .portionheader {
     padding-top: 2%;
@@ -253,11 +254,11 @@ img {
     border-radius: 20px;
 }
 
-.btn.btn-outline-dark:hover {
-    color: #303030; /* Text color on hover */
-    background-color: #f1f1f1; /* Background color on hover */
-    border-color: #303030; /* Border color on hover */
-}
+    .btn.btn-outline-dark:hover {
+        color: #303030; /* Text color on hover */
+        background-color: #f1f1f1; /* Background color on hover */
+        border-color: #303030; /* Border color on hover */
+    }
 
 .btn.btn-outline-dark-big {
     width: 32%;
@@ -271,19 +272,23 @@ img {
     border-radius: 40px;
 }
 
-.btn.btn-outline-dark-big:hover {
-    color: #303030; /* Text color on hover */
-    background-color: #f1f1f1; /* Background color on hover */
-    border-color: #f1f1f1; /* Border color on hover */
-}
+    .btn.btn-outline-dark-big:hover {
+        color: #303030; /* Text color on hover */
+        background-color: #f1f1f1; /* Background color on hover */
+        border-color: #f1f1f1; /* Border color on hover */
+    }
 
 .image-filter {
     filter: grayscale(100%); /* Convert image to grayscale */
     transition: filter 0.3s ease; /* Smooth transition for the filter effect */
 }
 
-.image-filter:hover {
-    filter: none; /* Revert to original color on hover */
+    .image-filter:hover {
+        filter: none; /* Revert to original color on hover */
+    }
+
+.uv-index-guide-contact {
+    margin-top: 60px;
 }
 
 @media (max-width: 800px) {
@@ -293,7 +298,7 @@ img {
         padding-bottom: 100px;
     }
 
-    .image-collage-wrap{
+    .image-collage-wrap {
         width: 80%;
     }
 
@@ -308,13 +313,13 @@ img {
         align-items: normal;
     }
 
-    .image-collage-row img {
-        width: calc(50% - 5px); /* Adjust the width as needed */
-        height: auto;
-        object-fit: cover; /* Ensures the image covers the container fully */
-        margin-right: 0;
-        border-radius: 10px;
-    }
+        .image-collage-row img {
+            width: calc(50% - 5px); /* Adjust the width as needed */
+            height: auto;
+            object-fit: cover; /* Ensures the image covers the container fully */
+            margin-right: 0;
+            border-radius: 10px;
+        }
 
     .container-type-1,
     .stage-column,
@@ -328,24 +333,24 @@ img {
         font-size: 100%;
     }
 
-    .text-section-full p {
-        width: 80%; /* Smaller size for circular images */
-        align-self: center;
-    }
+        .text-section-full p {
+            width: 80%; /* Smaller size for circular images */
+            align-self: center;
+        }
 
-    .container-type-1 img,
-    .stage-column img {
-        width: 80%; /* Adjust image width to fit the container */
-        height: auto; /* Adjust height automatically */
-        max-height: 300px;
-        max-width: 100%;
-    }
+        .container-type-1 img,
+        .stage-column img {
+            width: 80%; /* Adjust image width to fit the container */
+            height: auto; /* Adjust height automatically */
+            max-height: 300px;
+            max-width: 100%;
+        }
 
-    .stage-column img.roundedimage {
-        width: 100%; /* Smaller size for circular images */
-        height: auto; /* Maintain aspect ratio */
-        max-width: 100%;
-    }
+            .stage-column img.roundedimage {
+                width: 100%; /* Smaller size for circular images */
+                height: auto; /* Maintain aspect ratio */
+                max-width: 100%;
+            }
 
     .subject-image img,
     .graph-image img {
@@ -376,12 +381,12 @@ img {
         max-height: 300px;
     }
 
-    .row-single-image img {
-        width: 100%; /* Fixed width for the image container */
-        height: auto; /* Fixed height for the image container */
-        object-fit: cover; /* Ensures the image covers the container fully */
-        border-radius: 20px;
-    }
+        .row-single-image img {
+            width: 100%; /* Fixed width for the image container */
+            height: auto; /* Fixed height for the image container */
+            object-fit: cover; /* Ensures the image covers the container fully */
+            border-radius: 20px;
+        }
 }
 
 .UvIndex {
@@ -479,9 +484,9 @@ img {
     color: #fff;
 }
 
-.button-link:hover {
-    color: #fff;
-}
+    .button-link:hover {
+        color: #fff;
+    }
 
 #address {
     width: 100%;
@@ -691,13 +696,14 @@ img {
     font-size: 18px;
 }
 
-.uvi-info span {
-    color: #dc1616;
-}
+    .uvi-info span {
+        color: #dc1616;
+    }
 
-.uvi-info p {
-    font-size: 18px;
-}
+    .uvi-info p {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
 
 .sunrise,
 .sunset {

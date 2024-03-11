@@ -20,7 +20,7 @@ function MaxUviDay(a, e) {
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     DibujarAirQuality(a);
-    
+
     const uvLevelElements = document.querySelectorAll(".uvLevel");
     uvLevelElements.forEach(uvLevelElement => {
         let uvLevelText = "";
@@ -40,23 +40,23 @@ function MaxUviDay(a, e) {
     const uvInfoElement = document.querySelector(".uvi-info");
     if (uvInfoElement) {
         let uvLevelText = `<span>Suggestion:</span>`;
-        if  (a === "") {
+        if (a === "") {
             uvLevelText = "";
         } else if (a <= 2) {
             uvLevelText +=
-                `<p>U 1-2: under UV 3 experts agree that little sun protection is needed if exposure is less than 1 hour.</p><a class="btn btn-outline-dark" href="/Home/HowToProtect#SunscreenUsageStart">Sunscreen Usage »</a>`;
+                `<p>U 1-2: under UV 3 experts agree that little sun protection is needed if exposure is less than 1 hour.</p>`;
         } else if (a <= 4) {
             uvLevelText +=
-                `<p>UV 3-4: This is a mild UV level which necessitates sun protection if you are outside for more than 30 minutes.</p><a class="btn btn-outline-dark" href="/Home/HowToProtect#SunscreenUsageStart">Sunscreen Usage »</a>`;
+                `<p>UV 3-4: This is a mild UV level which necessitates sun protection if you are outside for more than 30 minutes.</p>`;
         } else if (a <= 6) {
             uvLevelText +=
-                `<p>UV 5-6: High UV index that necessitates careful planning to avoid skin damage if outside. Fair skinned people will burn 20 minutes of unprotected exposure.</p><a class="btn btn-outline-dark" href="/Home/HowToProtect#SunscreenUsageStart">Sunscreen Usage »</a>`;
+                `<p>UV 5-6: High UV index that necessitates careful planning to avoid skin damage if outside. Fair skinned people will burn 20 minutes of unprotected exposure.</p>`;
         } else if (a <= 8) {
             uvLevelText +=
-                `<p>UV 7-8: Very High UV levels. Take diligent care in the sun as adults will burn in 15 minutes. Children younger than 4 will burn quicker!</p><a class="btn btn-outline-dark" href="/Home/HowToProtect#SunscreenUsageStart">Sunscreen Usage »</a>`;
+                `<p>UV 7-8: Very High UV levels. Take diligent care in the sun as adults will burn in 15 minutes. Children younger than 4 will burn quicker!</p>`;
         } else {
             uvLevelText +=
-                `<p>UV 9-11+ Extreme UV levels. Strongly consider staying indoors between 10 am - 4 pm. If outside take care not to expose skin for long periods of time.</p><a class="btn btn-outline-dark" href="/Home/HowToProtect#SunscreenUsageStart">Sunscreen Usage »</a>`;
+                `<p>UV 9-11+ Extreme UV levels. Strongly consider staying indoors between 10 am - 4 pm. If outside take care not to expose skin for long periods of time.</p>`;
         }
         uvInfoElement.innerHTML = uvLevelText; // Update the UV level text based on maximum UV index
     }
