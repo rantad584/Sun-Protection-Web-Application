@@ -24,16 +24,23 @@ namespace SunScreenApplication.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public ActionResult HowToProtect()
+        public ActionResult FunSunSafety()
         {
-            ViewBag.Message = "How to Protect from UV page";
+            ViewBag.Message = "Fun Sun Safety for Children page";
 
             return View();
         }
 
-        public ActionResult FunSunSafety()
+        public ActionResult SunscreenUsage()
         {
-            ViewBag.Message = "Fun Sun Safety for Children page";
+            ViewBag.Message = "Sunscreen Usage page";
+
+            return View();
+        }
+
+        public ActionResult ClothingRecommendations()
+        {
+            ViewBag.Message = "Clothing Recommendations page";
 
             return View();
         }
